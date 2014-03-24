@@ -59,7 +59,10 @@ class Request(models.Model):
         self.is_ajax = request.is_ajax()
 
         # User infomation
+
+        #the following line was changed by uzi:
         self.ip = request.META.get('HTTP_X_FORWARDED_FOR', '') if settings.REQUEST_USE_HEROKU_IP else request.META.get('REMOTE_ADDR', '')
+
         self.referer = request.META.get('HTTP_REFERER', '')[:255]
         self.user_agent = request.META.get('HTTP_USER_AGENT', '')[:255]
         self.language = request.META.get('HTTP_ACCEPT_LANGUAGE', '')[:255]

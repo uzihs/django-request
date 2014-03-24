@@ -1,6 +1,9 @@
 django-request
 ==============
 
+This fork is being used by GreenCloud. It's on usihs account since GB doesn't have Github account.
+The only change was done on models.py (marked with a comment).
+
 django-request is a statistics module for django. It stores requests in a database for admins to see, it can also be used to get statistics on who is online etc.
 
 ![Traffic graph](docs/graph.png)
